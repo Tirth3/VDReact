@@ -1,0 +1,94 @@
+/* 
+#69247C
+#DA498D
+#FAC67A
+#F9E6CF 
+ */
+.cardcarousel
+{
+    position: relative;
+    left: 25%;
+    max-width: 50%;
+    border-radius: 10px;
+    background-color: #FAC67A;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* align-content: center; */
+    /* flex-direction: row; */
+}
+
+
+.ctitle
+{
+    margin: 10px;
+
+    position: auto;
+    width: 50%;
+
+    color: #DA498D;
+}
+
+.description
+{
+    margin: 10px;
+    position: auto;
+    width: 50%;
+    min-height: 40%;
+    color: #69247C;
+}
+.cimage{
+    border-radius: 10px;
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.card
+{
+    margin: 10px;
+    height: 100%;
+
+    background-color: #F9E6CF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.nextbtn
+{
+    cursor: pointer;
+    background-color: #DA498D;
+    width: 50px;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s ease, transform 0.3s ease;
+}
+.nextbtn:hover{
+    background-color: rgb(227, 149, 185);
+    transform: scale(1.1);
+}
+.buttons
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.asking
+{
+    /* margin: 10px; */
+    /* margin-left: 60px; */
+    /* background-color: #00000028; */
+    position: relative;
+    left: 20%;
+    width: 100%;
+    min-height: 40%;
+    color: #69247C;  
+    font-weight: bolder;
+}
