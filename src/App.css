@@ -60,7 +60,7 @@
 {
     cursor: pointer;
     background-color: #DA498D;
-    width: 50px;
+    width: 20%;
     height: 30px;
     margin: 10px;
     text-align: center;
@@ -91,4 +91,21 @@
     min-height: 40%;
     color: #69247C;  
     font-weight: bolder;
+}
+
+.bgmbtn
+{
+    cursor: pointer;
+    background-color: #FAC67A;
+    color: #69247C;
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s ease, transform 0.3s ease;
+} 
+.bgmbtn:hover{
+    background-color: #f9d092;
+    transform: scale(1.1);
 }
