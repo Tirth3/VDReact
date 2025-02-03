@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react'
 import { motion } from "framer-motion"
-import { Flowers } from './components/Flowers';
 import Confetti from 'react-confetti'
 import './App.css'
 
@@ -10,7 +9,6 @@ import './App.css'
 //DA498D
 //FAC67A
 //F9E6CF 
-
 const cards = [
   { id: 1, title: "🎉A most heartily welcome!✨", description: "Upon the verdant mead so wide,\nDoth silver moon in silence glide.\nSoft winds whisper, rivers gleam,\nNight enfolds a golden dream.", img: '' },
   { id: 2, title: "1. A Whisper of Love, A Promise Everlasting📜🌙💖", description: "Upon yon fair and fated eve,\nWhere roses bloom and lovers weave,\nA question humbly dost I pose A token of love,\nas time bestows.", img: './images/1.jpg' },
@@ -37,17 +35,16 @@ let bgmplaying = false;
 function App() {
   const [index, setIndex] = useState(0);
 
-  const nextCard = () => { if(index == 0){bgm.play();} setIndex((prev) => (prev + 1) % cards.length) };
+  const nextCard = () => { setIndex((prev) => (prev + 1) % cards.length) };  // if(index == 0){bgm.play();}
   const prevCard = () => setIndex((prev) => (prev - 1 + cards.length) % cards.length);
   const nocard = () => { setIndex((prev) => 5); no = true };
   const yescard = () => { setIndex((prev) => 6); yes = true };
-  const controlaudio = () => { if(bgmplaying){ bgm.pause(); bgmplaying = false; } else{ bgm.play(); bgmplaying = true; } };
-  const bgm = new Audio('./songs/bgm (2).mp3');
+  // const controlaudio = () => { if(bgmplaying){ bgm.pause(); bgmplaying = false; } else{ bgm.play(); bgmplaying = true; } };
+  // const bgm = new Audio('./songs/bgm (2).mp3');
   // bgm.autoplay = true;
   // bgm.play();
   return (
     <>
-      {/* <Flowers></Flowers> */}
       {/* <h1> Valentine!! </h1> */}
       <motion.div
         key={index}
@@ -74,15 +71,15 @@ function App() {
                 </>}
             </div>
           </div>
-          {(index > 0)?
+          {(index > 0) ?
             <img className="cimage" src={cards[index].img} alt="" /> : <></>
           }
         </div>
       </motion.div>
 
-      {(yes)? <Confetti
+      {(yes) ? <Confetti
         drawShape={ctx => {
-          ctx.beginPath()
+          ctx.beginPath();
           for (let i = 0; i < 22; i++) {
             const angle = 0.35 * i
             const x = (0.2 + (1.5 * angle)) * Math.cos(angle)
@@ -93,7 +90,7 @@ function App() {
           ctx.closePath()
         }}
       /> : <></>}
-    {/* <div className="bgmbtn" onClick={controlaudio}>Play/Pause</div> */}
+      {/* <div className="bgmbtn" onClick={controlaudio}>Play/Pause</div> */}
     </>
   )
 }

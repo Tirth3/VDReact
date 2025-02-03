@@ -4,8 +4,7 @@
 #FAC67A
 #F9E6CF 
  */
-.cardcarousel
-{
+.cardcarousel {
     position: relative;
     left: 25%;
     max-width: 50%;
@@ -19,33 +18,30 @@
 }
 
 
-.ctitle
-{
-    margin: 10px;
-
+.ctitle {
     position: auto;
+    margin: 10px;
     width: 50%;
 
     color: #DA498D;
 }
 
-.description
-{
+.description {
     margin: 10px;
     position: auto;
     width: 50%;
     min-height: 40%;
     color: #69247C;
 }
-.cimage{
+
+.cimage {
     border-radius: 10px;
     margin: 10px;
     width: 100%;
     height: 100%;
 }
 
-.card
-{
+.card {
     margin: 10px;
     height: 100%;
 
@@ -56,23 +52,25 @@
     align-items: center;
     justify-content: flex-start;
 }
-.nextbtn
-{
+
+.nextbtn {
     cursor: pointer;
     background-color: #DA498D;
-    width: 20%;
-    height: 30px;
+    width: 15%;
+    /* height: 30px; */
     margin: 10px;
     text-align: center;
+    vertical-align: middle;
     border-radius: 10px;
     transition: 0.3s ease, transform 0.3s ease;
 }
-.nextbtn:hover{
+
+.nextbtn:hover {
     background-color: rgb(227, 149, 185);
     transform: scale(1.1);
 }
-.buttons
-{
+
+.buttons {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -80,8 +78,7 @@
     margin: 10px;
 }
 
-.asking
-{
+.asking {
     /* margin: 10px; */
     /* margin-left: 60px; */
     /* background-color: #00000028; */
@@ -89,12 +86,12 @@
     left: 20%;
     width: 100%;
     min-height: 40%;
-    color: #69247C;  
+    color: #69247C;
     font-weight: bolder;
+    text-wrap: balance;    
 }
 
-.bgmbtn
-{
+.bgmbtn {
     cursor: pointer;
     background-color: #FAC67A;
     color: #69247C;
@@ -104,8 +101,32 @@
     text-align: center;
     border-radius: 10px;
     transition: 0.3s ease, transform 0.3s ease;
-} 
-.bgmbtn:hover{
+}
+
+.bgmbtn:hover {
     background-color: #f9d092;
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    * {
+        font-size: small;
+        margin: 0;
+    }
+
+    .cimage {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cardcarousel
+    {
+        position: absolute;
+        left: 20%;
+        max-width: 100vw; 
+    }
+    /* .ctitle
+    {
+        font-size: medium;
+    } */
 }
