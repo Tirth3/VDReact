@@ -35,12 +35,12 @@ let bgmplaying = false;
 function App() {
   const [index, setIndex] = useState(0);
 
-  const nextCard = () => { setIndex((prev) => (prev + 1) % cards.length) };  // if(index == 0){bgm.play();}
+  const nextCard = () => { if(index == 0){bgm.play();} setIndex((prev) => (prev + 1) % cards.length) };  //if(index == 0){bgm.play();}
   const prevCard = () => setIndex((prev) => (prev - 1 + cards.length) % cards.length);
   const nocard = () => { setIndex((prev) => 5); no = true };
   const yescard = () => { setIndex((prev) => 6); yes = true };
   // const controlaudio = () => { if(bgmplaying){ bgm.pause(); bgmplaying = false; } else{ bgm.play(); bgmplaying = true; } };
-  // const bgm = new Audio('./songs/bgm (2).mp3');
+  const bgm = new Audio('./songs/bgm (2).mp3');
   // bgm.autoplay = true;
   // bgm.play();
   return (
